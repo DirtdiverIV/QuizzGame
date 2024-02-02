@@ -1,5 +1,6 @@
-// src/components/Quiz.js
+// components/Quiz.js
 import React, { useState } from 'react';
+import '../styles.css'; 
 
 const Quiz = ({ questions }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -20,11 +21,23 @@ const Quiz = ({ questions }) => {
     }
   };
 
+  const resetQuiz = () => {
+    setCurrentQuestion(0);
+    setScore(0);
+    setShowScore(false);
+  };
+
   return (
     <div className="max-w-md mx-auto p-4 bg-white shadow-lg rounded-md">
       {showScore ? (
         <div>
           <h2 className="text-2xl font-bold mb-4">Your Score: {score} / {questions.length}</h2>
+          <button
+            className="bg-blue-500 text-white px-4 py-2 rounded-md"
+            onClick={resetQuiz}
+          >
+            Start Over
+          </button>
         </div>
       ) : (
         <div>
