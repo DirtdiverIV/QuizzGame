@@ -1,4 +1,4 @@
-// components/Quiz.js
+// src/components/Quiz.js
 import React, { useState } from 'react';
 
 const Quiz = ({ questions }) => {
@@ -21,17 +21,21 @@ const Quiz = ({ questions }) => {
   };
 
   return (
-    <div>
+    <div className="max-w-md mx-auto p-4 bg-white shadow-lg rounded-md">
       {showScore ? (
         <div>
-          <h2>Your Score: {score} / {questions.length}</h2>
+          <h2 className="text-2xl font-bold mb-4">Your Score: {score} / {questions.length}</h2>
         </div>
       ) : (
         <div>
-          <h2>Question {currentQuestion + 1}:</h2>
-          <p>{questions[currentQuestion].question}</p>
+          <h2 className="text-xl font-bold mb-2">Question {currentQuestion + 1}:</h2>
+          <p className="text-lg mb-4">{questions[currentQuestion].question}</p>
           {questions[currentQuestion].answers.map((answer, index) => (
-            <button key={index} onClick={() => handleAnswerClick(answer.isCorrect)}>
+            <button
+              key={index}
+              className="bg-blue-500 text-white px-4 py-2 rounded-md mr-2 mb-2"
+              onClick={() => handleAnswerClick(answer.isCorrect)}
+            >
               {answer.text}
             </button>
           ))}
