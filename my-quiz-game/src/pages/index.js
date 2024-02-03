@@ -5,7 +5,7 @@ import '../styles.css';
 import Header from '../components/Header';
 
 const Home = () => {
-  const logoSrc = "/flag4.png"; // Ajusta la ruta según la estructura de tu proyecto
+  const logoSrc = "/flag4.png"; 
 
   return (
     <div>
@@ -26,7 +26,7 @@ const Home = () => {
           3. Haz clic en la opción que consideres correcta antes de que se agote el tiempo.
         </p>
         <p className="text-lg mb-4">
-          ¡Prepárate para desafiar tus conocimientos! Haz clic en "Comenzar Juego" cuando estés listo.
+          ¡Prepárate para desafiar tus conocimientos! Haz clic en Comenzar Juego cuando estés listo.
         </p>
         <Link href="/quiz">
           <button className="bg-blue-500 text-white px-4 py-2 rounded-md">Empezar Juego</button>

@@ -7,14 +7,14 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden; /* Esto evita la barra de desplazamiento vertical */
+    overflow: hidden; 
   }
 
 body {
-    background-image: url('./images/quizz4.png'); /* Reemplaza 'ruta/de/tu/imagen.jpg' con la ruta correcta de tu imagen */
+    background-image: url('./images/quizz4.png'); 
     background-position: center;
     background-repeat: repeat;
-    margin: 0; /* Elimina el margen predeterminado del body */
-    font-family: 'Avenir', sans-serif; /* Añade cualquier fuente deseada */
-    /* Otros estilos globales que desees añadir */
+    margin: 0; 
+    font-family: 'Avenir', sans-serif; 
+    
   }
