@@ -7,7 +7,7 @@ import '../styles.css';
 const Instructions = () => {
   return (
     <div>
-      <Header title="Quiz Game" />
+      <Header title="Quiz Game" logoSrc={logoSrc} altText="Logo" />
       <InstructionsComponent />
     </div>
   );

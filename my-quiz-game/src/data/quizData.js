@@ -2,6 +2,7 @@
 const quizData = [
     {
       question: 'What is the capital of France?',
+      image: 'URL_DE_LA_IMAGEN',
       answers: [
         { text: 'Berlin', isCorrect: false },
         { text: 'Madrid', isCorrect: false },
@@ -11,6 +12,7 @@ const quizData = [
     },
     {
       question: 'Which planet is known as the Red Planet?',
+      image: 'URL_DE_LA_IMAGEN',
       answers: [
         { text: 'Earth', isCorrect: false },
         { text: 'Mars', isCorrect: true },
@@ -20,6 +22,7 @@ const quizData = [
     },
     {
       question: 'What is the largest mammal in the world?',
+      image: 'URL_DE_LA_IMAGEN',
       answers: [
         { text: 'Elephant', isCorrect: false },
         { text: 'Blue Whale', isCorrect: true },
@@ -29,6 +32,7 @@ const quizData = [
     },
     {
       question: 'Who wrote "Romeo and Juliet"?',
+      image: 'URL_DE_LA_IMAGEN',
       answers: [
         { text: 'Charles Dickens', isCorrect: false },
         { text: 'Jane Austen', isCorrect: false },

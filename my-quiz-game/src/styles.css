@@ -2,3 +2,19 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Esto evita la barra de desplazamiento vertical */
+  }
+
+body {
+    background-image: url('./images/quizz4.png'); /* Reemplaza 'ruta/de/tu/imagen.jpg' con la ruta correcta de tu imagen */
+    background-position: center;
+    background-repeat: repeat;
+    margin: 0; /* Elimina el margen predeterminado del body */
+    font-family: 'Avenir', sans-serif; /* Añade cualquier fuente deseada */
+    /* Otros estilos globales que desees añadir */
+  }

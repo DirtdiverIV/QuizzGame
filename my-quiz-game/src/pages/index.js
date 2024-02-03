@@ -5,9 +5,11 @@ import '../styles.css';
 import Header from '../components/Header';
 
 const Home = () => {
+  const logoSrc = "/flag4.png"; // Ajusta la ruta según la estructura de tu proyecto
+
   return (
     <div>
-      <Header title="Quiz Game" />
+      <Header title="Quiz Game" logoSrc={logoSrc} altText="Logo" />
       <div className="max-w-md mx-auto p-4 bg-white shadow-lg rounded-md">
         <h2 className="text-2xl font-bold mb-4">Instructions</h2>
         <p className="text-lg mb-4">
