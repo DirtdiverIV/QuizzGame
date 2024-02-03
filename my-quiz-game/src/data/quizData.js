@@ -432,7 +432,7 @@ const quizData = [
   },
   {
     "question": "¿Qué empresa gallega es conocida por su producción de lácteos?",
-    "image": "URL_DE_LA_IMAGEN",
+    "image": "/flag4.png",
     "answers": [
       { "text": "Leche Pascual", "isCorrect": false },
       { "text": "Leche Asturiana", "isCorrect": false },
@@ -442,7 +442,7 @@ const quizData = [
   },
   {
     "question": "¿Qué empresa gallega es conocida por su producción de agua mineral?",
-    "image": "URL_DE_LA_IMAGEN",
+    "image": "/flag4.png",
     "answers": [
       { "text": "Aguas de Lanjarón", "isCorrect": false },
       { "text": "Aguas de Bezoya", "isCorrect": false },
@@ -452,7 +452,7 @@ const quizData = [
   },
   {
     "question": "¿Qué empresa gallega es conocida por su producción de cerveza?",
-    "image": "URL_DE_LA_IMAGEN",
+    "image": "/flag4.png",
     "answers": [
       { "text": "Mahou", "isCorrect": false },
       { "text": "Estrella Galicia", "isCorrect": true },

@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
-import shuffle from 'lodash/shuffle'; // Asegúrate de instalar lodash: npm install lodash
+import shuffle from 'lodash/shuffle';
 import '../styles.css';
 
-const Quiz = ({ questions }) => {
+const Quiz = ({ questions, keyForRemount }) => {
   const [selectedQuestions, setSelectedQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -11,11 +11,10 @@ const Quiz = ({ questions }) => {
   const timerRef = useRef();
 
   useEffect(() => {
-    // Seleccionar aleatoriamente 10 preguntas al cargar el componente
     const shuffledQuestions = shuffle(questions).slice(0, 10);
     setSelectedQuestions(shuffledQuestions);
-    setShowScore(false); // Asegurarse de que showScore sea falso al cargar nuevas preguntas
-  }, [questions]);
+    setShowScore(false);
+  }, [questions, keyForRemount]);
 
   useEffect(() => {
     if (timeLeft > 0 && currentQuestionIndex < selectedQuestions.length && !showScore) {
@@ -31,7 +30,7 @@ const Quiz = ({ questions }) => {
     } else if (timeLeft === 0 && !showScore) {
       handleNextQuestionWithDelay();
     }
-  
+
     return () => clearInterval(timerRef.current);
   }, [currentQuestionIndex, selectedQuestions, showScore, timeLeft]);
 
@@ -56,11 +55,12 @@ const Quiz = ({ questions }) => {
   };
 
   const handleNextQuestionWithDelay = () => {
-    // Aumentar el retraso antes de cambiar a la siguiente pregunta
     setTimeout(handleNextQuestion, 1000);
   };
 
   const resetQuiz = () => {
+    const shuffledQuestions = shuffle(questions).slice(0, 10);
+    setSelectedQuestions(shuffledQuestions);
     setCurrentQuestionIndex(0);
     setScore(0);
     setShowScore(false);
@@ -85,17 +85,16 @@ const Quiz = ({ questions }) => {
         ) : (
           <div>
             <h2 className="text-2xl font-bold mb-2">Question {currentQuestionIndex + 1}:</h2>
-            {/* Renderizar la imagen si está presente */}
             {selectedQuestions[currentQuestionIndex] && selectedQuestions[currentQuestionIndex].image && (
-  <img
-    src={selectedQuestions[currentQuestionIndex].image}
-    alt={`Question ${currentQuestionIndex + 1}`}
-    className="mb-4 rounded-md"
-  />
-)}
+              <img
+                src={selectedQuestions[currentQuestionIndex].image}
+                alt={`Question ${currentQuestionIndex + 1}`}
+                className="mb-4 rounded-md"
+              />
+            )}
             {selectedQuestions[currentQuestionIndex] && selectedQuestions[currentQuestionIndex].question && (
-  <p className="text-lg mb-4">{selectedQuestions[currentQuestionIndex].question}</p>
-)}
+              <p className="text-lg mb-4">{selectedQuestions[currentQuestionIndex].question}</p>
+            )}
             <div className="mb-4">
               <div className="relative pt-1">
                 <div className="flex flex-col w-full">
@@ -112,18 +111,18 @@ const Quiz = ({ questions }) => {
               </div>
             </div>
             {selectedQuestions[currentQuestionIndex] && selectedQuestions[currentQuestionIndex].answers && (
-  <div className="flex flex-col">
-    {selectedQuestions[currentQuestionIndex].answers.map((answer, index) => (
-      <button
-        key={index}
-        className="text-lg bg-blue-500 text-white px-4 py-2 rounded-md mb-2"
-        onClick={() => handleAnswerClick(answer.isCorrect)}
-      >
-        {answer.text}
-      </button>
-    ))}
-  </div>
-)}
+              <div className="flex flex-col">
+                {selectedQuestions[currentQuestionIndex].answers.map((answer, index) => (
+                  <button
+                    key={index}
+                    className="text-lg bg-blue-500 text-white px-4 py-2 rounded-md mb-2"
+                    onClick={() => handleAnswerClick(answer.isCorrect)}
+                  >
+                    {answer.text}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
         )}
       </div>
