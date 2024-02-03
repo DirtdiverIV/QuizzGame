@@ -5,17 +5,23 @@ import instructionsImage from '../public/flag4.png'; // Ajusta la ruta según la
 const InstructionsComponent = () => {
   return (
     <div className="flex items-center justify-center h-screen">
-      <div className="max-w-2xl p-8 bg-white shadow-lg rounded-md">
-        <h1 className="text-4xl font-bold mb-4">Instructions</h1>
-        <img
-          src={instructionsImage}
-          alt="Instructions Image"
-          className="mb-4 rounded-md"
-        />
+      <div className="w-1/2 p-8 bg-white shadow-lg rounded-md">
+        <h1 className="text-4xl font-bold mb-4">Instrucciones</h1>
         <p className="text-lg mb-4">
-          Welcome to the Quiz Game! Read the instructions below and click the "Start" button when you are ready to begin.
+          ¡Bienvenido al Juego de Preguntas! Aquí tienes las instrucciones para disfrutar del juego:
         </p>
-        <p className="text-red-500">This is a new paragraph for testing purposes.</p>
+        <p className="text-lg mb-4">
+          1. El juego consta de 10 preguntas aleatorias.
+        </p>
+        <p className="text-lg mb-4">
+          2. Tienes 10 segundos para responder cada pregunta.
+        </p>
+        <p className="text-lg mb-4">
+          3. Haz clic en la opción que consideres correcta antes de que se agote el tiempo.
+        </p>
+        <p className="text-lg mb-4">
+          ¡Prepárate para desafiar tus conocimientos! Haz clic en "Comenzar Juego" cuando estés listo.
+        </p>
       </div>
     </div>
   );

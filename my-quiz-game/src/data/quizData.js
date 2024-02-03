@@ -2,7 +2,7 @@
 const quizData = [
   {
     question: '¿Cuál es la capital de Galicia?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/1.jpg',
     answers: [
       { text: 'Vigo', isCorrect: false },
       { text: 'A Coruña', isCorrect: false },
@@ -12,7 +12,7 @@ const quizData = [
   },
   {
     question: '¿Qué idioma se habla en Galicia además del español?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/2.jpg',
     answers: [
       { text: 'Catalán', isCorrect: false },
       { text: 'Euskera', isCorrect: false },
@@ -22,7 +22,7 @@ const quizData = [
   },
   {
     question: '¿Cuál es el plato más famoso de Galicia?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/3.jpg',
     answers: [
       { text: 'Paella', isCorrect: false },
       { text: 'Tortilla Española', isCorrect: false },
@@ -32,7 +32,7 @@ const quizData = [
   },
   {
     question: '¿Cuál es la festividad más importante de Galicia?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/4.jpg',
     answers: [
       { text: 'San Fermín', isCorrect: false },
       { text: 'La Tomatina', isCorrect: false },
@@ -42,7 +42,7 @@ const quizData = [
   },
   {
     question: '¿Cuál es el río más largo de Galicia?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/5.jpg',
     answers: [
       { text: 'Río Sil', isCorrect: false },
       { text: 'Río Miño', isCorrect: true },
@@ -52,7 +52,7 @@ const quizData = [
   },
   {
     question: '¿Cuál es la catedral más famosa de Galicia?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/6.jpg',
     answers: [
       { text: 'Catedral de León', isCorrect: false },
       { text: 'Catedral de Burgos', isCorrect: false },
@@ -62,7 +62,7 @@ const quizData = [
   },
   {
     question: '¿Cuál es la ciudad más poblada de Galicia?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/7.jpg',
     answers: [
       { text: 'Santiago de Compostela', isCorrect: false },
       { text: 'Vigo', isCorrect: true },
@@ -72,7 +72,7 @@ const quizData = [
   },
   {
     question: '¿Cuál es el vino más famoso de Galicia?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/8.jpg',
     answers: [
       { text: 'Rioja', isCorrect: false },
       { text: 'Ribera del Duero', isCorrect: false },
@@ -82,17 +82,17 @@ const quizData = [
   },
   {
     question: '¿Cuál es el parque natural más grande de Galicia?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/9.jpg',
     answers: [
       { text: 'Parque Natural de las Islas Atlánticas', isCorrect: false },
       { text: 'Parque Natural de las Dunas de Corrubedo', isCorrect: false },
-      { text: 'Parque Natural de O Invernadeiro', isCorrect: true },
+      { text: 'Parque Natural de Baixa Limia', isCorrect: true },
       { text: 'Parque Natural de la Sierra de la Enciña de la Lastra', isCorrect: false },
     ],
   },
   {
     question: '¿Cuál es el puerto más importante de Galicia?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/10.jpg',
     answers: [
       { text: 'Puerto de A Coruña', isCorrect: false },
       { text: 'Puerto de Vigo', isCorrect: true },
@@ -102,7 +102,7 @@ const quizData = [
   },
   {
     question: '¿Cuál es el instrumento musical tradicional de Galicia?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/11.jpg',
     answers: [
       { text: 'Guitarra', isCorrect: false },
       { text: 'Gaita', isCorrect: true },
@@ -112,7 +112,7 @@ const quizData = [
   },
   {
     question: '¿Qué mar baña la costa de Galicia?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/12.jpg',
     answers: [
       { text: 'Mar Mediterráneo', isCorrect: false },
       { text: 'Mar Cantábrico', isCorrect: false },
@@ -122,7 +122,7 @@ const quizData = [
   },
   {
     question: '¿Cuál es el faro más antiguo del mundo que aún está en funcionamiento y se encuentra en Galicia?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/13.jpg',
     answers: [
       { text: 'Faro de Fisterra', isCorrect: false },
       { text: 'Faro de Estaca de Bares', isCorrect: false },
@@ -132,7 +132,7 @@ const quizData = [
   },
   {
     question: '¿Cuál es el nombre del camino de peregrinación que termina en Santiago de Compostela?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/14.jpg',
     answers: [
       { text: 'Camino de Santiago', isCorrect: true },
       { text: 'Camino de la Plata', isCorrect: false },
@@ -142,7 +142,7 @@ const quizData = [
   },
   {
     question: '¿Cuál es el nombre de la danza tradicional de Galicia?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/15.jpg',
     answers: [
       { text: 'Flamenco', isCorrect: false },
       { text: 'Sardana', isCorrect: false },
@@ -152,7 +152,7 @@ const quizData = [
   },
   {
     question: '¿Cuál es el nombre del archipiélago gallego que es Parque Nacional?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/16.jpg',
     answers: [
       { text: 'Islas Cíes', isCorrect: false },
       { text: 'Islas Ons', isCorrect: false },
@@ -162,7 +162,7 @@ const quizData = [
   },
   {
     question: '¿Cuál es el nombre del licor tradicional de Galicia?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/17.jpg',
     answers: [
       { text: 'Brandy', isCorrect: false },
       { text: 'Orujo', isCorrect: true },
@@ -172,7 +172,7 @@ const quizData = [
   },
   {
     question: '¿Cuál es el nombre de la torta de almendras típica de Santiago de Compostela?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/18.jpg',
     answers: [
       { text: 'Tarta de San Marcos', isCorrect: false },
       { text: 'Tarta de la Abuela', isCorrect: false },
@@ -182,7 +182,7 @@ const quizData = [
   },
   {
     question: '¿Cuál es el nombre del estrecho marítimo que separa Galicia de la vecina Portugal?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/19.jpg',
     answers: [
       { text: 'Estrecho de Gibraltar', isCorrect: false },
       { text: 'Estrecho de Magallanes', isCorrect: false },
@@ -191,8 +191,8 @@ const quizData = [
     ],
   },
   {
-    question: '¿Cuál es el nombre de la fortaleza situada en A Coruña que es Patrimonio de la Humanidad?',
-    image: 'URL_DE_LA_IMAGEN',
+    question: '¿Cuál es el nombre de la construccion situada en A Coruña que es Patrimonio de la Humanidad?',
+    image: '/img/20.jpg',
     answers: [
       { text: 'Castillo de San Felipe', isCorrect: false },
       { text: 'Castillo de San Antón', isCorrect: false },
@@ -201,18 +201,18 @@ const quizData = [
     ],
   },
   {
-    question: '¿Cuál es el nombre del famoso camino de peregrinación que pasa por Galicia?',
-    image: 'URL_DE_LA_IMAGEN',
+    question: '¿Cuál se considera el final del camino tras llegar a Santiago?',
+    image: '/img/21.jpg',
     answers: [
-      { text: 'Camino de Santiago', isCorrect: true },
-      { text: 'Camino de la Plata', isCorrect: false },
-      { text: 'Camino Francés', isCorrect: false },
-      { text: 'Camino del Norte', isCorrect: false },
+      { text: 'Finisterre', isCorrect: true },
+      { text: 'Muxia', isCorrect: false },
+      { text: 'Estaca de Bares', isCorrect: false },
+      { text: 'Muros', isCorrect: false },
     ],
   },
   {
-    question: '¿Cuál es el nombre del famoso marisco gallego con concha triangular?',
-    image: 'URL_DE_LA_IMAGEN',
+    question: '¿Cuál es el nombre del famoso marisco gallego cuya concha llevan los peregrinos?',
+    image: '/img/22.jpg',
     answers: [
       { text: 'Mejillón', isCorrect: false },
       { text: 'Vieira', isCorrect: true },
@@ -222,7 +222,7 @@ const quizData = [
   },
   {
     question: '¿Cuál es el nombre de la famosa torre situada en A Coruña?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/23.jpg',
     answers: [
       { text: 'Torre de Pisa', isCorrect: false },
       { text: 'Torre Eiffel', isCorrect: false },
@@ -231,18 +231,8 @@ const quizData = [
     ],
   },
   {
-    question: '¿Cuál es el nombre del famoso licor gallego hecho con restos de uva?',
-    image: 'URL_DE_LA_IMAGEN',
-    answers: [
-      { text: 'Orujo', isCorrect: true },
-      { text: 'Whisky', isCorrect: false },
-      { text: 'Ron', isCorrect: false },
-      { text: 'Ginebra', isCorrect: false },
-    ],
-  },
-  {
     question: '¿Cuál es el nombre de la famosa playa situada en las Islas Cíes?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/24.jpg',
     answers: [
       { text: 'Playa de la Concha', isCorrect: false },
       { text: 'Playa de las Catedrales', isCorrect: false },
@@ -252,7 +242,7 @@ const quizData = [
   },
   {
     question: '¿Cuál es el nombre del famoso queso gallego con denominación de origen?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/25.jpg',
     answers: [
       { text: 'Queso Manchego', isCorrect: false },
       { text: 'Queso Cabrales', isCorrect: false },
@@ -262,7 +252,7 @@ const quizData = [
   },
   {
     question: '¿Cuál es el nombre del famoso pimiento picante gallego?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/26.jpg',
     answers: [
       { text: 'Pimiento de Padrón', isCorrect: true },
       { text: 'Pimiento de Guernica', isCorrect: false },
@@ -272,7 +262,7 @@ const quizData = [
   },
   {
     question: '¿Cuál es el nombre del famoso pan gallego con denominación de origen?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/27.jpg',
     answers: [
       { text: 'Pan de Cea', isCorrect: true },
       { text: 'Pan de Alfacar', isCorrect: false },
@@ -281,8 +271,8 @@ const quizData = [
     ],
   },
   {
-    question: '¿Cuál es el nombre del famoso embutido gallego hecho con partes del cerdo?',
-    image: 'URL_DE_LA_IMAGEN',
+    question: '¿Cuál es el nombre del famosa carne gallega hecho con partes del cerdo?',
+    image: '/img/28.jpg',
     answers: [
       { text: 'Chorizo', isCorrect: false },
       { text: 'Botillo', isCorrect: false },
@@ -292,7 +282,7 @@ const quizData = [
   },
   {
     question: '¿Cuál es el nombre del famoso río gallego que desemboca en el Atlántico?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/29.jpg',
     answers: [
       { text: 'Río Ebro', isCorrect: false },
       { text: 'Río Duero', isCorrect: false },
@@ -302,7 +292,7 @@ const quizData = [
   },
   {
     question: '¿Cuál es el nombre del reino medieval que se estableció en Galicia?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/30.jpg',
     answers: [
       { text: 'Reino de León', isCorrect: false },
       { text: 'Reino de Castilla', isCorrect: false },
@@ -312,7 +302,7 @@ const quizData = [
   },
   {
     question: '¿Cuál es el nombre de la cultura pre-romana que habitó Galicia?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/31.jpg',
     answers: [
       { text: 'Cultura Íbera', isCorrect: false },
       { text: 'Cultura Tartésica', isCorrect: false },
@@ -321,8 +311,8 @@ const quizData = [
     ],
   },
   {
-    question: '¿Cuál es el nombre del emperador romano nacido en Galicia?',
-    image: 'URL_DE_LA_IMAGEN',
+    question: '¿Cuál es el nombre del emperador romano nacido en Gallaecia?',
+    image: '/img/32.jpg',
     answers: [
       { text: 'Julio César', isCorrect: false },
       { text: 'Nerón', isCorrect: false },
@@ -332,7 +322,7 @@ const quizData = [
   },
   {
     question: '¿Cuál es el nombre de la revuelta contra el dominio romano en Galicia?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/33.jpg',
     answers: [
       { text: 'Guerra de las Galias', isCorrect: false },
       { text: 'Guerras Cántabras', isCorrect: false },
@@ -342,7 +332,7 @@ const quizData = [
   },
   {
     question: '¿Cuál es el nombre del monasterio medieval más importante de Galicia?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/34.jpg',
     answers: [
       { text: 'Monasterio de Leyre', isCorrect: false },
       { text: 'Monasterio de Silos', isCorrect: false },
@@ -352,7 +342,7 @@ const quizData = [
   },
   {
     question: '¿Cuál es el nombre del arzobispo que inició la construcción de la catedral de Santiago de Compostela?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/35.jpg',
     answers: [
       { text: 'Arzobispo Rodrigo', isCorrect: false },
       { text: 'Arzobispo Diego Gelmírez', isCorrect: true },
@@ -361,18 +351,8 @@ const quizData = [
     ],
   },
   {
-    question: '¿Cuál es el nombre de la batalla en la que Almanzor fue derrotado en Galicia?',
-    image: 'URL_DE_LA_IMAGEN',
-    answers: [
-      { text: 'Batalla de Clavijo', isCorrect: false },
-      { text: 'Batalla de las Navas de Tolosa', isCorrect: false },
-      { text: 'Batalla de Covadonga', isCorrect: false },
-      { text: 'Batalla de Cervera', isCorrect: true },
-    ],
-  },
-  {
     question: '¿Cuál es el nombre del primer rey de Galicia?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/36.jpg',
     answers: [
       { text: 'Rey Alfonso I', isCorrect: false },
       { text: 'Rey Hermerico', isCorrect: true },
@@ -382,7 +362,7 @@ const quizData = [
   },
   {
     question: '¿Cuál es el nombre de la leyenda que explica el origen del Apóstol Santiago en Galicia?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/37.jpg',
     answers: [
       { text: 'Leyenda de la Dama Blanca', isCorrect: false },
       { text: 'Leyenda de la Reina Lupa', isCorrect: false },
@@ -392,7 +372,7 @@ const quizData = [
   },
   {
     question: '¿Cuál es el nombre del castro gallego más famoso?',
-    image: 'URL_DE_LA_IMAGEN',
+    image: '/img/38.jpg',
     answers: [
       { text: 'Castro de Baroña', isCorrect: true },
       { text: 'Castro de Coaña', isCorrect: false },
@@ -402,7 +382,7 @@ const quizData = [
   },
   {
     "question": "¿Cuál es la empresa gallega más grande en términos de facturación?",
-    "image": "URL_DE_LA_IMAGEN",
+    "image": "/img/39.jpg",
     "answers": [
       { "text": "Mercadona", "isCorrect": false },
       { "text": "Inditex", "isCorrect": true },
@@ -412,7 +392,7 @@ const quizData = [
   },
   {
     "question": "¿Qué empresa gallega es famosa por su producción de vino albariño?",
-    "image": "URL_DE_LA_IMAGEN",
+    "image": "/img/40.jpg",
     "answers": [
       { "text": "Bodegas Ramón Bilbao", "isCorrect": false },
       { "text": "Bodegas Protos", "isCorrect": false },
@@ -422,17 +402,17 @@ const quizData = [
   },
   {
     "question": "¿Qué empresa gallega es conocida por su producción de conservas de pescado?",
-    "image": "URL_DE_LA_IMAGEN",
+    "image": "/img/41.jpg",
     "answers": [
       { "text": "Conservas Albo", "isCorrect": false },
-      { "text": "Conservas Frinsa", "isCorrect": true },
+      { "text": "Conservas Calvo", "isCorrect": true },
       { "text": "Conservas Dani", "isCorrect": false },
       { "text": "Conservas Ortiz", "isCorrect": false }
     ]
   },
   {
     "question": "¿Qué empresa gallega es conocida por su producción de lácteos?",
-    "image": "/flag4.png",
+    "image": "/img/42.jpg",
     "answers": [
       { "text": "Leche Pascual", "isCorrect": false },
       { "text": "Leche Asturiana", "isCorrect": false },
@@ -442,7 +422,7 @@ const quizData = [
   },
   {
     "question": "¿Qué empresa gallega es conocida por su producción de agua mineral?",
-    "image": "/flag4.png",
+    "image": "/img/43.jpg",
     "answers": [
       { "text": "Aguas de Lanjarón", "isCorrect": false },
       { "text": "Aguas de Bezoya", "isCorrect": false },
@@ -452,7 +432,7 @@ const quizData = [
   },
   {
     "question": "¿Qué empresa gallega es conocida por su producción de cerveza?",
-    "image": "/flag4.png",
+    "image": "/img/44.jpg",
     "answers": [
       { "text": "Mahou", "isCorrect": false },
       { "text": "Estrella Galicia", "isCorrect": true },
