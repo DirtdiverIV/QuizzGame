@@ -1,15 +1,24 @@
 import React, { useState, useEffect, useRef } from 'react';
+import shuffle from 'lodash/shuffle'; // Asegúrate de instalar lodash: npm install lodash
 import '../styles.css';
 
 const Quiz = ({ questions }) => {
-  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [selectedQuestions, setSelectedQuestions] = useState([]);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
   const [timeLeft, setTimeLeft] = useState(10);
   const timerRef = useRef();
 
   useEffect(() => {
-    if (timeLeft > 0 && currentQuestion < questions.length && !showScore) {
+    // Seleccionar aleatoriamente 10 preguntas al cargar el componente
+    const shuffledQuestions = shuffle(questions).slice(0, 10);
+    setSelectedQuestions(shuffledQuestions);
+    setShowScore(false); // Asegurarse de que showScore sea falso al cargar nuevas preguntas
+  }, [questions]);
+
+  useEffect(() => {
+    if (timeLeft > 0 && currentQuestionIndex < selectedQuestions.length && !showScore) {
       timerRef.current = setInterval(() => {
         setTimeLeft((prevTime) => {
           if (prevTime === 0) {
@@ -19,12 +28,12 @@ const Quiz = ({ questions }) => {
           return prevTime - 1;
         });
       }, 1000);
-    } else {
+    } else if (timeLeft === 0 && !showScore) {
       handleNextQuestionWithDelay();
     }
-
+  
     return () => clearInterval(timerRef.current);
-  }, [currentQuestion, questions, showScore, timeLeft]);
+  }, [currentQuestionIndex, selectedQuestions, showScore, timeLeft]);
 
   const handleAnswerClick = (isCorrect) => {
     if (isCorrect) {
@@ -37,10 +46,10 @@ const Quiz = ({ questions }) => {
   const handleNextQuestion = () => {
     clearInterval(timerRef.current);
     setTimeLeft(10);
-    const nextQuestion = currentQuestion + 1;
+    const nextQuestionIndex = currentQuestionIndex + 1;
 
-    if (nextQuestion < questions.length) {
-      setCurrentQuestion(nextQuestion);
+    if (nextQuestionIndex < selectedQuestions.length) {
+      setCurrentQuestionIndex(nextQuestionIndex);
     } else {
       setShowScore(true);
     }
@@ -52,7 +61,7 @@ const Quiz = ({ questions }) => {
   };
 
   const resetQuiz = () => {
-    setCurrentQuestion(0);
+    setCurrentQuestionIndex(0);
     setScore(0);
     setShowScore(false);
     setTimeLeft(10);
@@ -65,7 +74,7 @@ const Quiz = ({ questions }) => {
       <div className="w-1/2 h-1/2 p-8 bg-white shadow-lg rounded-md">
         {showScore ? (
           <div>
-            <h2 className="text-3xl font-bold mb-4">Your Score: {score} / {questions.length}</h2>
+            <h2 className="text-3xl font-bold mb-4">Your Score: {score} / {selectedQuestions.length}</h2>
             <button
               className="text-lg bg-blue-500 text-white px-4 py-2 rounded-md"
               onClick={resetQuiz}
@@ -75,16 +84,18 @@ const Quiz = ({ questions }) => {
           </div>
         ) : (
           <div>
-            <h2 className="text-2xl font-bold mb-2">Question {currentQuestion + 1}:</h2>
+            <h2 className="text-2xl font-bold mb-2">Question {currentQuestionIndex + 1}:</h2>
             {/* Renderizar la imagen si está presente */}
-            {questions[currentQuestion].image && (
-              <img
-                src={questions[currentQuestion].image}
-                alt={`Question ${currentQuestion + 1}`}
-                className="mb-4 rounded-md"
-              />
-            )}
-            <p className="text-lg mb-4">{questions[currentQuestion].question}</p>
+            {selectedQuestions[currentQuestionIndex] && selectedQuestions[currentQuestionIndex].image && (
+  <img
+    src={selectedQuestions[currentQuestionIndex].image}
+    alt={`Question ${currentQuestionIndex + 1}`}
+    className="mb-4 rounded-md"
+  />
+)}
+            {selectedQuestions[currentQuestionIndex] && selectedQuestions[currentQuestionIndex].question && (
+  <p className="text-lg mb-4">{selectedQuestions[currentQuestionIndex].question}</p>
+)}
             <div className="mb-4">
               <div className="relative pt-1">
                 <div className="flex flex-col w-full">
@@ -100,17 +111,19 @@ const Quiz = ({ questions }) => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col">
-              {questions[currentQuestion].answers.map((answer, index) => (
-                <button
-                  key={index}
-                  className="text-lg bg-blue-500 text-white px-4 py-2 rounded-md mb-2"
-                  onClick={() => handleAnswerClick(answer.isCorrect)}
-                >
-                  {answer.text}
-                </button>
-              ))}
-            </div>
+            {selectedQuestions[currentQuestionIndex] && selectedQuestions[currentQuestionIndex].answers && (
+  <div className="flex flex-col">
+    {selectedQuestions[currentQuestionIndex].answers.map((answer, index) => (
+      <button
+        key={index}
+        className="text-lg bg-blue-500 text-white px-4 py-2 rounded-md mb-2"
+        onClick={() => handleAnswerClick(answer.isCorrect)}
+      >
+        {answer.text}
+      </button>
+    ))}
+  </div>
+)}
           </div>
         )}
       </div>
@@ -119,3 +132,4 @@ const Quiz = ({ questions }) => {
 };
 
 export default Quiz;
+
